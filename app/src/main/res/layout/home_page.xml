@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainFrame.HomePage"
+    android:background="@color/app_src_clr_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+
+             <androidx.cardview.widget.CardView
+                 android:id="@+id/cd_search"
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_marginBottom="5dp"
+                 app:cardCornerRadius="10dp"
+                 app:cardElevation="0dp">
+                 <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:background="@color/app_src_clr_bg"  >
+
+             <EditText
+                         android:id="@+id/search_ed"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                          android:hint="Search Product"
+                         android:textColor="@color/black"
+                         android:fontFamily="@font/poppins_regular"
+                         android:paddingLeft="25dp"
+                         android:textSize="14dp"
+                         android:textStyle="bold"
+                          android:background="@color/app_src_clr_bg"                        />
+
+                     <ImageView
+                         android:layout_width="15dp"
+                         android:layout_height="15dp"
+                         android:src="@drawable/btm_search_icon"
+                        android:layout_alignParentRight="true"
+                         android:layout_marginTop="12dp"
+                         android:layout_marginRight="15dp"
+                         app:tint="@color/black" />
+                 </RelativeLayout>
+             </androidx.cardview.widget.CardView>
+
+
+
+             <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/search_lt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:errorEnabled="false"
+            app:hintEnabled="false"
+            android:visibility="gone"
+            app:errorTextAppearance="@style/error"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/grey"
+            app:startIconDrawable="@drawable/btm_search_icon"
+            app:startIconTint="@color/grey"
+            style="@style/LoginTextInputLayoutStyle"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                 android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/text_input_with_border_bg"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Search Product"
+                android:paddingLeft="50dp"
+                android:textColorHint="@color/grey" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/search_lt_btn"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="-82dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_view_bg"
+            android:layout_toRightOf="@+id/search_lt">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/btm_search_icon"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+             <androidx.cardview.widget.CardView
+                 android:id="@+id/cd_pager"
+                 android:layout_width="match_parent"
+                 android:layout_height="150dp"
+                 app:cardCornerRadius="10dp"
+                 app:cardElevation="0dp"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_marginTop="5dp"
+                 android:layout_below="@+id/cd_search"
+                 >
+
+
+                 <androidx.viewpager.widget.ViewPager
+                     android:id="@+id/pager"
+                     android:layout_width="match_parent"
+                     android:layout_height="160dp"
+                     />
+
+
+             </androidx.cardview.widget.CardView>
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Category"
+                 android:textColor="@color/text_clr"
+                 android:textStyle="bold"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:textSize="16dp"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginTop="15dp"
+                 android:layout_marginRight="10dp"
+                 android:layout_marginBottom="10dp"
+                 android:layout_below="@+id/cd_pager"/>
+
+             <TextView
+                 android:id="@+id/more_cat_btn"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="More Category"
+                 android:layout_alignParentRight="true"
+                 android:textColor="@color/app_src_clr"
+                 android:textStyle="bold"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:textSize="16dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginTop="15dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_marginBottom="10dp"
+                 android:layout_below="@+id/cd_pager"/>
+
+
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/recyclerView"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/more_cat_btn"
+                 android:layout_alignParentEnd="true"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:layout_marginBottom="10dp"
+                 />
+
+             <TextView
+                 android:id="@+id/cat_alert"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="20dp"
+                 android:text="No Categories to show"
+                 android:textColor="@color/dark_grey"
+                 android:gravity="center"
+                 android:textSize="14dp"
+                 android:visibility="gone"
+                 android:fontFamily="@font/poppins_regular"
+                 android:textStyle="bold"
+                 android:layout_below="@+id/more_cat_btn"
+                 />
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Popular Brands"
+                 android:textColor="@color/text_clr"
+                 android:textStyle="bold"
+                 android:visibility="visible"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:textSize="16dp"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="10dp"
+                 android:layout_marginTop="15dp"
+                 android:layout_below="@+id/recyclerView"/>
+
+             <TextView
+                 android:id="@+id/more_po_btn"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="See More"
+                 android:visibility="visible"
+                 android:layout_alignParentRight="true"
+                 android:textColor="@color/app_src_clr"
+                 android:textStyle="bold"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:textSize="16dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_marginTop="15dp"
+                 android:layout_below="@+id/recyclerView"/>
+
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/recyclerView_po"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/more_po_btn"
+                 android:layout_alignParentEnd="true"
+                 android:layout_marginTop="19dp"
+                 android:visibility="visible"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                  android:layout_marginBottom="0dp" />
+
+             <TextView
+                 android:id="@+id/po_alert"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="20dp"
+                 android:text="No Popular Offers to show"
+                 android:textColor="@color/dark_grey"
+                 android:gravity="center"
+                 android:textSize="14dp"
+                 android:visibility="gone"
+                 android:fontFamily="@font/poppins_regular"
+                 android:textStyle="bold"
+                 android:layout_below="@+id/more_po_btn"
+                 />
+
+
+
+             <androidx.cardview.widget.CardView
+                 android:id="@+id/cd_banner_img"
+                 android:layout_width="match_parent"
+                 android:layout_height="185dp"
+                 app:cardCornerRadius="10dp"
+                 app:cardElevation="5dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:layout_marginTop="25dp"
+                 android:layout_below="@+id/recyclerView_po"
+                 >
+
+                 <ImageView
+                     android:id="@+id/banner_img"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"/>
+
+
+             </androidx.cardview.widget.CardView>
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="New Arrivals"
+                 android:textColor="@color/text_clr"
+                 android:textStyle="bold"
+                 android:visibility="visible"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:textSize="16dp"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="10dp"
+                 android:layout_marginTop="15dp"
+                 android:layout_below="@+id/cd_banner_img"/>
+
+             <TextView
+                 android:id="@+id/more_off_btn"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="See More"
+                 android:visibility="visible"
+                 android:layout_alignParentRight="true"
+                 android:textColor="@color/app_src_clr"
+                 android:textStyle="bold"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:textSize="16dp"
+                 android:layout_below="@+id/cd_banner_img"
+             android:layout_marginLeft="10dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_marginTop="15dp"
+               />
+
+
+
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/recyclerView_products"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/more_off_btn"
+                 android:layout_alignParentEnd="true"
+                 android:layout_marginTop="19dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:layout_marginBottom="60dp" />
+
+
+             <TextView
+                 android:id="@+id/off_alert"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="20dp"
+                 android:text="No Offers to show"
+                 android:textColor="@color/dark_grey"
+                 android:gravity="center"
+                 android:textSize="14dp"
+                 android:visibility="gone"
+                 android:fontFamily="@font/poppins_regular"
+                 android:textStyle="bold"
+                 android:layout_below="@+id/cd_banner_img"
+                 />
+
+
+         </RelativeLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="25dp"
+            android:visibility="gone"
+            android:text="Log out"
+            android:fontFamily="@font/poppins_semibold"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/btn_clr"
+            />
+
+        <include
+            layout="@layout/progress_lt"
+            android:visibility="gone"
+            android:id="@+id/progress_layout"/>
+
+        <include
+            android:id="@+id/btm_nav"
+            layout="@layout/btm_nav"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

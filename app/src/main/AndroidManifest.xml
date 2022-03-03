@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.Buyaway_User">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Buyaway_User"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme">
+        <activity android:name=".mainFrame.NewArrival"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".mainFrame.DetailsPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mainFrame.EditProfileImage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".login_pack.ProfilePage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mainFrame.GoogleMapActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".test.TestActivity"></activity>
+        <activity android:name=".mainFrame.OffersPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mainFrame.SearchPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mainFrame.HomePage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".login_pack.Forgot_Password_Page"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".login_pack.Register_Page"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".login_pack.Login_Page"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SplshScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/GOOGLE_API_KEY" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

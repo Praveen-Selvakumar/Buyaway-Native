@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Buyaway </string>
+    <string name="appname">Buyaway</string>
+    <string name="app_moto">Buy it your way</string>
+    <string name="welcome_note">Welcome to Buyaway</string>
+    <string name="sign_in_intimate">Sign in to continue</string>
+    <string name="change_pwd_hint">Change your Password</string>
+    <string name="sign_in_txt">sign in</string>
+    <string name="user_name_txt">Username</string>
+    <string name="priary_number_txt">Primary Number</string>
+    <string name="password_txt">Password</string>
+    <string name="current_password_txt">Current Password</string>
+    <string name="new_password_txt">New Password</string>
+    <string name="skip_for_now_txt">Skip for now</string>
+    <string name="forgot_password_tint">Forgot Password?</string>
+    <string name="create_new_acc">Create a new account</string>
+    <string name="reset_password_tint">Reset password Here</string>
+    <string name="reset_password_txt">Reset password</string>
+    <string name="GOOGLE_API_KEY">AIzaSyAXHjfG-uPXzaETD2f8SMJ1QUpigtZMdVQ</string>
+
+</resources>

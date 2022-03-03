@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btm_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="15dp"
+    android:layout_marginTop="10dp"
+   android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="-5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    android:backgroundTint="@color/black"
+    >
+
+    <LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/delete_lt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DELETE PROFILE IMAGE"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                 android:src="@drawable/delete_icon"
+                app:tint="@color/white"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="50dp"/>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/upload_lt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPLOAD PROFILE IMAGE"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/user_icon"
+                app:tint="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="50dp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white"/>
+
+
+        <RelativeLayout
+            android:id="@+id/cancel_lt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CANCEL"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="17dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/cancel_icon"
+                app:tint="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="55dp"/>
+        </RelativeLayout>
+
+
+</LinearLayout >
+</androidx.cardview.widget.CardView>

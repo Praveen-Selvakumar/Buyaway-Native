@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/btm_home"
+        android:title="Home"
+        android:icon="@drawable/btm_home_icon"
+        />
+    <item android:id="@+id/btm_search"
+        android:title="Search"
+        android:icon="@drawable/btm_search_icon"
+        />
+    <item android:id="@+id/btm_offers"
+        android:title="Offers"
+        android:icon="@drawable/btm_price_tag_icon"
+        />
+    <item android:id="@+id/btm_login"
+        android:title="Login"
+        android:icon="@drawable/user_icon"
+        />
+</menu>

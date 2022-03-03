@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/register_page_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/welcome_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Let's Get Started"/>
+
+    <TextView
+        android:id="@+id/sign_in_tint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_note"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/create_new_acc" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_name_lt_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_mail_lt_reg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="15dp"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:startIconDrawable="@drawable/user_icon"
+        app:startIconTint="@color/grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_name_ed_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Full Name"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_mail_lt_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/user_mobile_number_lt"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:startIconTint="@color/grey"
+        app:startIconDrawable="@drawable/user_icon"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+         android:id="@+id/user_email_ed_reg"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Invoice mail"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:backgroundTint="@color/grey"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_mobile_number_lt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/sign_in_tint"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:startIconTint="@color/grey"
+        app:startIconDrawable="@drawable/telephone_icon"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_mobile_number_ed_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Primary Number"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:maxLength="10"
+            android:inputType="number"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:backgroundTint="@color/grey"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_gender_lt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/user_mobile_number_lt"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        android:visibility="gone"
+        android:drawableEnd="@drawable/down_arrow"
+        app:startIconDrawable="@drawable/user_icon"
+        >
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/gender_spinner_ed_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your Gender"
+            android:textColorHint="#05ab9a"
+            android:paddingLeft="25dp"
+            android:textSize="14dp"
+              android:fontFamily="@font/poppins_regular"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_pwd_lt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        app:passwordToggleEnabled="true"
+        android:visibility="visible"
+        android:layout_below="@+id/user_name_lt_reg"
+        app:errorEnabled="false"
+        app:errorTextAppearance="@style/error"
+        app:startIconDrawable="@drawable/padlock_icon"
+        app:startIconTint="@color/grey"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_ed_reg"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:fontFamily="@font/poppins_regular"
+            android:backgroundTint="@color/grey"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_cf_pwd_lt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@+id/user_pwd_lt"
+        app:errorEnabled="false"
+        android:visibility="gone"
+        app:errorTextAppearance="@style/error"
+        app:startIconDrawable="@drawable/padlock_icon"
+        app:startIconTint="@color/grey"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirm_password_ed_reg"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:fontFamily="@font/poppins_regular"
+            android:backgroundTint="@color/grey"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/promo_code_lt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:visibility="visible"
+        android:layout_below="@+id/user_pwd_lt"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:startIconTint="@color/grey"
+        app:startIconDrawable="@drawable/coupons"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/promo_code_ed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Promo Code"
+            android:textSize="14dp"
+            android:textStyle="bold"
+             android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:backgroundTint="@color/grey"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/sign_up_btn_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/promo_code_lt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/blue_btn"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:textSize="15sp"
+        android:paddingBottom="8dp"
+        android:text="sign up"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/have_acc_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sign_up_btn_reg"
+        android:layout_marginTop="15dp"
+         android:paddingLeft="110dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="have an account?"/>
+
+    <TextView
+        android:id="@+id/return_to_login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/have_acc_txt"
+        android:layout_below="@+id/sign_up_btn_reg"
+        android:text="sign in"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/btn_clr"
+        android:fontFamily="@font/poppins_semibold"
+        />
+
+</RelativeLayout>

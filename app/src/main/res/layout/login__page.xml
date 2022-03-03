@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_pack.Login_Page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/progress_lt"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            layout="@layout/progress_lt"
+            android:visibility="gone"
+            />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/welcome_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="25dp"
+            android:visibility="gone"
+            android:textColor="@color/btn_clr"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="BUYAWAY"/>
+
+        <ImageView
+            android:id="@+id/src_logo"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="0dp"
+             android:visibility="visible"
+            android:src="@drawable/buyaway"
+          />
+
+        <RelativeLayout
+            android:id="@+id/overall_icons_lt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+           <ImageView
+               android:layout_width="85dp"
+               android:layout_height="85dp"
+
+               android:src="@drawable/blue_brd_circle"
+               android:layout_marginLeft="-20dp"
+               android:layout_marginTop="-50dp"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="-20dp"
+                android:elevation="10dp"
+                android:src="@drawable/brd_shoes"/>
+
+
+            <ImageView
+                android:layout_width="115dp"
+                android:layout_height="85dp"
+                android:src="@drawable/blue_brd_circle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="-60dp"
+                />
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-40dp"
+                 android:elevation="10dp"
+                android:layout_marginRight="75dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/brd_hawaiian_shirt"/>
+
+
+
+
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="120dp"
+                android:src="@drawable/blue_brd_circle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-55dp"
+                android:layout_marginTop="30dp"
+                />
+
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-40dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/brd_tshirt"/>
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/blue_brd_circle"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginTop="120dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginTop="130dp"
+                android:src="@drawable/brd_hawaiian_shirt" />
+
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/blue_brd_circle"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="100dp"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="110dp"
+                android:layout_marginLeft="130dp"
+                android:src="@drawable/brd_lipstick"/>
+
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/blue_brd_circle"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="100dp"/>
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="115dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="65dp"
+                android:src="@drawable/brd_heels"/>
+
+
+
+
+        </RelativeLayout>
+
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/src_logo"
+            android:visibility="gone"
+            android:layout_marginTop="-100dp"
+            layout="@layout/login_page_content"
+            />
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/src_logo"
+            android:visibility="gone"
+            layout="@layout/register_page_content"
+            />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/src_logo"
+            android:visibility="gone"
+            layout="@layout/forgot_password_page_contant"
+            />
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

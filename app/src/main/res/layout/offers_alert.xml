@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <View
+      android:id="@+id/v_one"
+      android:layout_width="match_parent"
+      android:layout_height="170dp"
+      android:layout_margin="10dp"
+      android:background="@drawable/alert_grey_bg"
+      />
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/close_icon"
+      android:layout_width="25dp"
+      android:layout_height="25dp"
+      android:src="@drawable/close_icon"
+      android:layout_alignParentRight="true"
+      android:layout_margin="5dp"
+      android:elevation="10dp" />
+
+
+  <TextView
+      android:id="@+id/title_txt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Offers in Outlets"
+      android:layout_centerHorizontal="true"
+      android:fontFamily="@font/poppins_semibold"
+      android:textStyle="bold"
+      android:textSize="26sp"
+      android:textColor="@color/black"
+      android:layout_marginTop="60dp"
+      />
+  <TextView
+      android:layout_below="@+id/title_txt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Flat 40% off"
+      android:layout_centerHorizontal="true"
+      android:fontFamily="@font/poppins_semibold"
+      android:textStyle="bold"
+      android:textSize="20sp"
+      android:textColor="@color/black"
+      />
+
+  <TextView
+      android:id="@+id/txt_one"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/v_one"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="17.5dp"
+      android:text="Indiranagar"
+      android:fontFamily="@font/poppins_semibold"
+      android:textColor="@color/black"
+      />
+  <TextView
+      android:id="@+id/txt_two"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/txt_one"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="12.5dp"
+      android:text="HSR"
+      android:fontFamily="@font/poppins_semibold"
+      android:textColor="@color/black"
+      />
+  <TextView
+      android:id="@+id/txt_three"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/txt_two"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="12.5dp"
+      android:text="Marthahalli"
+      android:fontFamily="@font/poppins_semibold"
+      android:textColor="@color/black"
+      />
+  <TextView
+      android:id="@+id/txt_km_one"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/v_one"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="17.5dp"
+      android:text="Indiranagar"
+      android:fontFamily="@font/poppins_semibold"
+      android:textColor="@color/black"
+      />
+  <TextView
+      android:id="@+id/txt_km_two"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/txt_one"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="12.5dp"
+      android:text="HSR"
+      android:fontFamily="@font/poppins_semibold"
+      android:textColor="@color/black"
+      />
+  <TextView
+      android:id="@+id/txt_km_three"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/txt_two"
+      android:layout_marginLeft="10dp"
+      android:layout_toRightOf="@+id/status_one"
+      android:layout_marginTop="12.5dp"
+      android:text="6.3 kM"
+      android:fontFamily="@font/poppins_semibold"
+      android:textColor="@color/black"
+      />
+
+
+  <View
+    android:id="@+id/v_"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/grey"
+     android:layout_margin="15dp"
+      android:layout_below="@+id/txt_three"
+     />
+
+
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cd_one"
+      android:layout_width="150dp"
+      android:layout_height="20dp"
+      android:layout_below="@+id/v_"
+      android:layout_marginLeft="30dp"
+      android:backgroundTint="#ff7d7f"
+      app:cardCornerRadius="55dp"
+      android:layout_marginRight="20dp"
+       />
+  <androidx.cardview.widget.CardView
+      android:id="@+id/status_one"
+      android:layout_width="150dp"
+      android:layout_height="20dp"
+       android:layout_below="@+id/v_one"
+      android:layout_marginTop="17dp"
+       android:layout_marginLeft="10dp"
+      android:backgroundTint="#ff7d7f"
+      app:cardCornerRadius="55dp"
+      android:layout_toRightOf="@+id/txt_one"
+      android:layout_marginRight="20dp"
+       />
+  <androidx.cardview.widget.CardView
+      android:id="@+id/status_two"
+      android:layout_width="100dp"
+      android:layout_height="20dp"
+       android:layout_below="@+id/status_one"
+      android:layout_marginTop="17dp"
+       android:layout_marginLeft="10dp"
+      android:backgroundTint="#fdd15c"
+      app:cardCornerRadius="55dp"
+      android:layout_toRightOf="@+id/txt_one"
+      android:layout_marginRight="20dp"
+       />
+  <androidx.cardview.widget.CardView
+      android:id="@+id/status_three"
+      android:layout_width="60dp"
+      android:layout_height="20dp"
+       android:layout_below="@+id/status_two"
+      android:layout_marginTop="17dp"
+       android:layout_marginLeft="10dp"
+      android:backgroundTint="#fcf475"
+      app:cardCornerRadius="55dp"
+      android:layout_toRightOf="@+id/txt_one"
+      android:layout_marginRight="20dp"
+       />
+   <TextView
+      android:id="@+id/t_one"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Good offer stock"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      android:textSize="12dp"
+      android:fontFamily="@font/poppins_semibold"
+      android:layout_marginRight="20dp"
+      android:layout_toRightOf="@+id/cd_one"
+       android:layout_below="@+id/v_"
+      />
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cd_two"
+      android:layout_width="150dp"
+      android:layout_height="20dp"
+      android:layout_below="@+id/cd_one"
+      android:layout_marginLeft="30dp"
+      android:backgroundTint="#fdd15c"
+      app:cardCornerRadius="55dp"
+      android:layout_marginTop="15dp"
+      android:layout_marginRight="20dp"
+       />
+
+  <TextView
+      android:id="@+id/t_two"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Average offer stock"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      android:textSize="12dp"
+      android:layout_marginTop="15dp"
+      android:fontFamily="@font/poppins_semibold"
+      android:layout_marginRight="20dp"
+      android:layout_toRightOf="@+id/cd_one"
+      android:layout_below="@+id/cd_one"
+      />
+
+<androidx.cardview.widget.CardView
+      android:id="@+id/cd_three"
+      android:layout_width="150dp"
+      android:layout_height="20dp"
+      android:layout_below="@+id/cd_two"
+      android:layout_marginLeft="30dp"
+      android:backgroundTint="#fcf475"
+      app:cardCornerRadius="55dp"
+      android:layout_marginTop="15dp"
+      android:layout_marginRight="20dp"
+      android:layout_marginBottom="20dp"
+       />
+
+  <TextView
+      android:id="@+id/t_three"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Limited offer stock"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      android:textSize="12dp"
+      android:layout_marginTop="15dp"
+      android:fontFamily="@font/poppins_semibold"
+      android:layout_marginRight="20dp"
+      android:layout_toRightOf="@+id/cd_two"
+      android:layout_below="@+id/cd_two"
+      />
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btm_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="-5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    android:backgroundTint="@color/white"
+     >
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_corners">
+
+        <RelativeLayout
+            android:id="@+id/cancel_lt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile image"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cancel"
+                android:layout_margin="10dp"
+                android:textSize="14dp"/>
+
+         </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/upload_lt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="upload profile image"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/icon_tint1"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <ImageView
+                android:id="@+id/icon_tint1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/user_icon"
+                app:tint="@color/app_src_clr"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"/>
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/delete_lt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="delete profile image"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/icon_tint2"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <ImageView
+                android:id="@+id/icon_tint2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/delete_icon"
+                app:tint="#ff0000"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"/>
+        </RelativeLayout>
+
+
+    </LinearLayout >
+</androidx.cardview.widget.CardView>

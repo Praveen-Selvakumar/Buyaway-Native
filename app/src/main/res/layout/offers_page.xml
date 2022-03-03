@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainFrame.OffersPage">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_src_clr_bg">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+
+         <androidx.cardview.widget.CardView
+             android:id="@+id/cd_search"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:layout_marginTop="20dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="20dp"
+             android:layout_marginBottom="5dp"
+             app:cardCornerRadius="10dp"
+             app:cardElevation="0dp">
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="@color/app_src_clr_bg">
+                 <EditText
+                     android:id="@+id/search_ed_off"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:hint="Search Product"
+                     android:textColor="@color/black"
+                     android:fontFamily="@font/poppins_regular"
+                     android:paddingLeft="25dp"
+                     android:textSize="14dp"
+                     android:textStyle="bold"
+                     android:background="@color/app_src_clr_bg"                        />
+
+                 <ImageView
+                     android:layout_width="15dp"
+                     android:layout_height="15dp"
+                     android:src="@drawable/btm_search_icon"
+                     android:layout_alignParentRight="true"
+                     android:layout_marginTop="12dp"
+                     android:layout_marginRight="15dp"
+                     app:tint="@color/black" />
+             </RelativeLayout>
+         </androidx.cardview.widget.CardView>
+
+
+
+
+     </RelativeLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+         android:layout_below="@+id/scrollView"/>
+
+
+
+    <include
+        android:id="@+id/btm_nav"
+        layout="@layout/btm_nav"/>
+
+    <include
+        android:id="@+id/progress_profile_lt"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        layout="@layout/progress_lt"
+        android:elevation="10dp"
+        />
+
+</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
